@@ -1,0 +1,39 @@
+{
+  "extends": "./tsconfig.paths.json",
+//  "compilerOptions": {
+//    "lib": ["ESNext"],
+//    "moduleResolution": "node",
+//    "noUnusedLocals": true,
+//    "noUnusedParameters": true,
+//    "removeComments": true,
+//    "sourceMap": true,
+//    "target": "ES2020",
+//    "outDir": "lib"
+//  },
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": ["ESNext"],
+    "types": ["reflect-metadata", "node"],
+    "typeRoots": [ "../node_modules/@types" ],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "removeComments": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "outDir": "lib",
+    "sourceMap": true,
+  },
+  "include": ["src/**/*.ts", "serverless.ts"],
+  "exclude": [
+    "node_modules/**/*",
+    ".serverless/**/*",
+    ".webpack/**/*",
+    "_warmup/**/*",
+    ".vscode/**/*"
+  ],
+  "ts-node": {
+    "require": ["tsconfig-paths/register"]
+  }
+}
